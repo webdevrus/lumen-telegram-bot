@@ -1,0 +1,17 @@
+<?php
+
+namespace {{ namespace }};
+
+use App\Telegram\Command;
+
+class {{ class }} extends Command
+{
+    public function handle()
+    {
+        $this->bot->sendMessage(
+            $this->message->getChat()->getId(),
+            'Hello, world!',
+            'markdown'
+        );
+    }
+}
