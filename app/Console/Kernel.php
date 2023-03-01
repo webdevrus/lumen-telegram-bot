@@ -14,6 +14,7 @@ class Kernel extends ConsoleKernel
      */
     protected $commands = [
         \App\Console\Commands\BotCommandMake::class,
+        \App\Console\Commands\BotSetWebhook::class,
     ];
 
     /**
