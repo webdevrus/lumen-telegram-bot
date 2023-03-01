@@ -44,6 +44,8 @@ $bot->command('start', function (\TelegramBot\Api\Types\Message $message) use ($
 
 2. Через класс `App\Telegram\Command`
 
+Для примера у нас будет `StartCommand`.
+
 В `/routes/commands.php`:
 ```php
 $bot->command('command', function (\TelegramBot\Api\Types\Message $message) use ($bot) {
@@ -51,7 +53,13 @@ $bot->command('command', function (\TelegramBot\Api\Types\Message $message) use 
 });
 ```
 
-В `/app/Commands` создайте класс команды *(например `StartCommand`)*:
+* Создайте класс команды через `artisan` в консоли:
+
+```console
+php artisan bot:command StartCommand
+```
+
+* Или в `/app/Commands` создайте класс команды вручную:
 ```php
 <?php
 
