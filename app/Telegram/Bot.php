@@ -5,6 +5,7 @@ namespace App\Telegram;
 use GuzzleHttp\Client;
 use TelegramBot\Api\Client as BotClient;
 
+/** @mixin \TelegramBot\Api\BotApi */
 class Bot extends BotClient
 {
     /** @var string */
